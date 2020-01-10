@@ -1,0 +1,6 @@
+********************************************************************************
+association : Linux_CSNetworkPort
+
+--------------------------------------------------------------------------------
+Linux_ComputerSystem : -target CIM_NetworkPort -eq -cmd cat /proc/net/dev | grep -c -E 'eth|lo|tr'
+CIM_NetworkPort : -target Linux_ComputerSystem -eq 1

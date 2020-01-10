@@ -1,0 +1,631 @@
+2009-05-22  Tyrel Datwyler <tyreld@us.ibm.com>
+
+	* COPYING, Makefile.am, NEWS, OSBase_CommonNetwork.c,
+	OSBase_CommonNetwork.h, OSBase_IPProtocolEndpoint.c,
+	OSBase_IPProtocolEndpoint.h, README, acinclude.m4,
+	autoconfiscate.sh, cmpiOSBase_CSNetworkPortProvider.c,
+	cmpiOSBase_EthernetPort.c, cmpiOSBase_EthernetPort.h,
+	cmpiOSBase_EthernetPortProvider.c, cmpiOSBase_IPProtocolEndpoint.c,
+	cmpiOSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_IPProtocolEndpointProvider.c,
+	cmpiOSBase_LocalLoopbackPort.c, cmpiOSBase_LocalLoopbackPort.h,
+	cmpiOSBase_LocalLoopbackPortProvider.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.h,
+	cmpiOSBase_NetworkPortImplementsIPEndpointProvider.c,
+	cmpiOSBase_TokenRingPort.c, cmpiOSBase_TokenRingPort.h,
+	cmpiOSBase_TokenRingPortProvider.c, provider-register.sh,
+	sblim-cmpi-network.rh.spec, sblim-cmpi-network.spec.in,
+	mof/Linux_Network.mof:
+
+	Fixed 2795176: migrate provider licenses to EPL
+
+2008-05-15  Saravanan Kannan <skanan@us.ibm.com>
+
+	* provider-register.sh:
+
+	[ 1395363 ] Providers' postinstall step location dependent.
+
+2007-11-19  Chris Buccella <buccella@vnet.linux.ibm.com>
+
+	* OSBase_CommonNetwork.c, OSBase_CommonNetwork.h,
+	OSBase_IPProtocolEndpoint.c, OSBase_IPProtocolEndpoint.h, README,
+	cmpiOSBase_CSNetworkPortProvider.c, cmpiOSBase_EthernetPort.c,
+	cmpiOSBase_EthernetPort.h, cmpiOSBase_EthernetPortProvider.c,
+	cmpiOSBase_IPProtocolEndpoint.c, cmpiOSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_IPProtocolEndpointProvider.c,
+	cmpiOSBase_LocalLoopbackPort.c, cmpiOSBase_LocalLoopbackPort.h,
+	cmpiOSBase_LocalLoopbackPortProvider.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.h,
+	cmpiOSBase_NetworkPortImplementsIPEndpointProvider.c,
+	cmpiOSBase_TokenRingPort.c, cmpiOSBase_TokenRingPort.h,
+	cmpiOSBase_TokenRingPortProvider.c, mof/Linux_Network.mof:
+
+	updated URL for CPL (1833455)
+
+2006-12-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac:
+
+	updated release information
+
+2006-11-23  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* Makefile.am:
+
+	[1601713]: fixed unresolved symbols in shared lib
+
+2006-11-16  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_CommonNetwork.c, OSBase_IPProtocolEndpoint.c:
+
+	bug #1597648: fix coredumps caused by data gathering with
+	restricted access rights
+
+2005-11-15  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, OSBase_CommonNetwork.c, OSBase_CommonNetwork.h,
+	OSBase_IPProtocolEndpoint.c, OSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_CSNetworkPortProvider.c, cmpiOSBase_EthernetPort.c,
+	cmpiOSBase_EthernetPort.h, cmpiOSBase_EthernetPortProvider.c,
+	cmpiOSBase_IPProtocolEndpoint.c, cmpiOSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_IPProtocolEndpointProvider.c,
+	cmpiOSBase_LocalLoopbackPort.c, cmpiOSBase_LocalLoopbackPort.h,
+	cmpiOSBase_LocalLoopbackPortProvider.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.h,
+	cmpiOSBase_NetworkPortImplementsIPEndpointProvider.c,
+	cmpiOSBase_TokenRingPort.c, cmpiOSBase_TokenRingPort.h,
+	cmpiOSBase_TokenRingPortProvider.c, configure.ac:
+
+	Bugs fixed: 1199129, 1203849. CMPI 1.0 compatibility.
+
+2005-11-11  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, Makefile.am, NEWS, README.tog-pegasus, configure.ac,
+	sblim-cmpi-network.rh.spec, sblim-cmpi-network.spec.in,
+	test/test-cmpi-network.sh:
+
+	Bugs fixed: 1353262. Better support for Fedora/RedHat RPM
+	environment.
+
+2005-09-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac:
+
+	Updates ChangeLog NEWS. configure.ac version.
+
+2005-09-09  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* provider-register.sh:
+
+	Bugs: 1285011, 1285324. Copied over from cmpi-samples.
+
+2005-09-06  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* provider-register.sh:
+
+	Bugs fixed: 1246886.
+
+2005-07-29  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, Makefile.am, configure.ac, provider-register.sh,
+	sblim-cmpi-network.spec.in:
+
+	Bug fixed: 1236584.  Enhanced tog-pegasus compatibility and made
+	more rpmlint-friendly.
+
+2005-07-28  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, provider-register.sh:
+
+	Bug fixed: 1236584.  Enhanced tog-pegasus compatibility.
+
+2005-06-01  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* configure.ac:
+
+	Changed version number to 1.3.5.
+
+2005-05-12  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, acinclude.m4, provider-register.sh:
+
+	Bugs fixed: 1183805.  Added support for OpenWBEM provider
+	registration.
+
+2005-05-11  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, NEWS, configure.ac:
+
+	Bugs fixed: 1199129.  Now compiles with cmpi-devel 1.0.0.
+
+2005-05-04  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* ChangeLog, Makefile.am, NEWS, cmpiOSBase_IPProtocolEndpoint.c,
+	configure.ac, provider-register.sh, sblim-cmpi-network.spec.in,
+	mof/Linux_Network.registration, mof/Linux_Network.sfcb.reg,
+	mof/Linux_NetworkRegister.mof,
+	test/system/linux/Linux_IPProtocolEndpoint.system:
+
+	Bug 1195244: Added Status property to Linux_IPProtocolEndpoint
+	class.	Further, modified the build files for the new
+	provider-register.sh interface.
+
+2005-04-19  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* README, README.TEST:
+
+	updated Installation Description
+
+2005-04-18  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* license.html:
+
+	bug# 1183805: autoconfiscate all provider packages - cmpi-network
+	done
+
+2005-04-18  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* AUTHORS, CHANGE.LOG, COPYING, ChangeLog, Makefile.am, NEWS,
+	README, README.TEST, acinclude.m4, autoconfiscate.sh, configure.ac,
+	makefile, provider-register.sh, sblim-cmpi-network.spec.in,
+	setting.cmpi, mof/Linux_Network.sfcb.reg,
+	mof/Linux_NetworkRegister.mof, mof/Linux_NetworkRegistration.mof,
+	mof/makefile.pegasus, mof/makefile.standalone, test/README,
+	test/makefile:
+
+	bug# 1183805: autoconfiscate all provider packages - cmpi-network
+	done
+
+2005-04-14  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG:
+
+	fixed version number for last check in
+
+2005-04-13  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG:
+
+	feature request# 1182259: MAC address is set as value for property
+	PermanentAddress of class Linux_EthernetPort
+
+2005-04-13  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_CommonNetwork.c, OSBase_CommonNetwork.h,
+	cmpiOSBase_EthernetPort.c:
+
+	feature request# 1182259: MAC address is set as value for property
+	PermanentAddress of class Linux_EthernetPort
+
+2005-03-07  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, OSBase_CommonNetwork.c, OSBase_IPProtocolEndpoint.c:
+
+	bug# 1158159: fixed parsing of /proc/net/dev for systems with high
+	amount of network traffic
+
+2004-09-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, cmpiOSBase_EthernetPort.c, cmpiOSBase_EthernetPort.h,
+	cmpiOSBase_EthernetPortProvider.c, cmpiOSBase_IPProtocolEndpoint.c,
+	cmpiOSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_IPProtocolEndpointProvider.c,
+	cmpiOSBase_LocalLoopbackPort.c, cmpiOSBase_LocalLoopbackPort.h,
+	cmpiOSBase_LocalLoopbackPortProvider.c, cmpiOSBase_TokenRingPort.c,
+	cmpiOSBase_TokenRingPort.h, cmpiOSBase_TokenRingPortProvider.c:
+
+	support for property list filter on EnumInstances and GetInstance
+
+2004-04-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG:
+
+	uodated latest changes
+
+2004-04-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/Linux_IPProtocolEndpoint.pl:
+
+	fixed wrong instance count
+
+2004-04-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/Linux_IPProtocolEndpoint.system:
+
+	fixed wrong count of instances
+
+2004-04-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG:
+
+	updated latest changes
+
+2004-04-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/test-cmpi-network.sh:
+
+	added support for userID and password
+
+2004-04-19  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/makefile:
+
+	prepared makefile for rpm build
+
+2004-03-31  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/Linux_IPProtocolEndpoint.pl:
+
+	values for address and netmask have not been right initialized for
+	inactive ports
+
+2004-03-30  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* makefile:
+
+	Removed header file install.
+
+2004-03-30  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* setting.cmpi:
+
+	updated path to CMPI header files in Pegasus
+
+2004-03-26  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* mof/makefile.standalone:
+
+	Also install registration mof.
+
+2004-03-24  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* makefile:
+
+	Added -fPIC to CFLAGS.
+
+2004-03-23  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, README, makefile, setting.cmpi, mof/makefile.cmpi,
+	mof/makefile.standalone, test/README:
+
+	prepared build process for rpm packaging
+
+2004-01-29  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* setting.cmpi:
+
+	removed old variable
+
+2004-01-26  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CHANGE.LOG, makefile, setting.cmpi, mof/Linux_Network.mof:
+
+	updated include path for Pegasus compile
+
+2003-12-04  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_CommonNetwork.c, OSBase_IPProtocolEndpoint.c,
+	cmpiOSBase_CSNetworkPortProvider.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpointProvider.c,
+	test/makefile:
+
+	enhanced error handling; returns human readable error messages now
+
+2003-11-03  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* semantictest_OSBaseStage2_Network.sh:
+
+	removed old test script
+
+2003-11-03  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/cim/: Linux_CSNetworkPort.cim, Linux_EthernetPort.cim,
+	Linux_IPProtocolEndpoint.cim, Linux_LocalLoopbackPort.cim,
+	Linux_NetworkPortImplementsIPEndpoint.cim, Linux_TokenRingPort.cim:
+
+	cleaned up config files for test suite
+
+2003-10-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/system/linux/createKeyFiles.sh:
+
+	part of cmpi-base test environment
+
+2003-10-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/README:
+
+	updated call to start test run
+
+2003-10-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: makefile, test-cmpi-network.sh,
+	system/linux/Linux_EthernetPort.system,
+	system/linux/Linux_IPProtocolEndpoint.system,
+	system/linux/Linux_LocalLoopbackPort.system,
+	system/linux/Linux_TokenRingPort.system:
+
+	fixed syntax failures in config files; fixed value of some
+	properties
+
+2003-10-20  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: README, makefile, system/linux/Linux_EthernetPort.system,
+	system/linux/Linux_CSNetworkPort.system,
+	system/linux/Linux_EthernetPort.pl,
+	system/linux/Linux_IPProtocolEndpoint.pl,
+	system/linux/Linux_IPProtocolEndpoint.system,
+	system/linux/Linux_LocalLoopbackPort.pl,
+	system/linux/Linux_LocalLoopbackPort.system,
+	system/linux/Linux_TokenRingPort.pl,
+	system/linux/Linux_TokenRingPort.system,
+	system/linux/createKeyFiles.sh:
+
+	minor changes in used system calls; added configuration files for
+	consistency test of all NetworkPorts and the IPProtocolEndpoints
+
+2003-10-15  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_CommonNetwork.c, OSBase_CommonNetwork.h,
+	OSBase_IPProtocolEndpoint.c, OSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_EthernetPort.c, cmpiOSBase_IPProtocolEndpoint.c,
+	cmpiOSBase_LocalLoopbackPort.c, cmpiOSBase_TokenRingPort.c:
+
+	fixed C-type to CIM type conversions (problems occured under
+	zSeries machine)
+
+2003-10-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* mof/Linux_NetworkRegistration.mof:
+
+	fixed registration ID of Method providers (ID 5)
+
+2003-09-24  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* INSTALL, README, setting.cmpi:
+
+	updated instructions to install cmpi-network package
+
+2003-09-15  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_CommonNetwork.c, OSBase_CommonNetwork.h,
+	OSBase_IPProtocolEndpoint.c, OSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_CSNetworkPortProvider.c, cmpiOSBase_EthernetPort.c,
+	cmpiOSBase_EthernetPort.h, cmpiOSBase_EthernetPortProvider.c,
+	cmpiOSBase_IPProtocolEndpoint.c, cmpiOSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_IPProtocolEndpointProvider.c,
+	cmpiOSBase_LocalLoopbackPort.c, cmpiOSBase_LocalLoopbackPort.h,
+	cmpiOSBase_LocalLoopbackPortProvider.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.h,
+	cmpiOSBase_NetworkPortImplementsIPEndpointProvider.c,
+	cmpiOSBase_TokenRingPort.c, cmpiOSBase_TokenRingPort.h,
+	cmpiOSBase_TokenRingPortProvider.c,
+	semantictest_OSBaseStage2_Network.sh, mof/Linux_Network.mof,
+	mof/Linux_NetworkRegistration.mof:
+
+	updated Copyright statement
+
+2003-09-09  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* mof/: Linux_Network.mof, Linux_NetworkRegistration.mof:
+
+	added namespace pragma
+
+2003-08-11  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* DEBUG, OSBase_CommonNetwork.c, OSBase_CommonNetwork.h,
+	OSBase_IPProtocolEndpoint.c, cmpiOSBase_CSNetworkPortProvider.c,
+	cmpiOSBase_EthernetPort.c, cmpiOSBase_EthernetPortProvider.c,
+	cmpiOSBase_IPProtocolEndpoint.c,
+	cmpiOSBase_IPProtocolEndpointProvider.c,
+	cmpiOSBase_LocalLoopbackPort.c,
+	cmpiOSBase_LocalLoopbackPortProvider.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpointProvider.c,
+	cmpiOSBase_TokenRingPort.c, cmpiOSBase_TokenRingPortProvider.c,
+	makefile:
+
+	implemented Trace Support
+
+2003-07-31  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_EthernetPort.c, cmpiOSBase_IPProtocolEndpoint.c,
+	cmpiOSBase_LocalLoopbackPort.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.c,
+	cmpiOSBase_TokenRingPort.c:
+
+	switched from direct access to CIM_HOST_NAME to access method
+	get_system_name()
+
+2003-07-09  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiOSBase_EthernetPort.c, cmpiOSBase_IPProtocolEndpoint.c,
+	cmpiOSBase_LocalLoopbackPort.c, cmpiOSBase_TokenRingPort.c:
+
+	fixed property name to be complient with CIM schema version 2.7
+
+2003-07-07  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* makefile, setting.cmpi:
+
+	more userfriendly check for Installation environment
+
+2003-07-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* OSBase_CommonNetwork.c, OSBase_CommonNetwork.h,
+	OSBase_IPProtocolEndpoint.c, OSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_CSNetworkPortProvider.c, cmpiOSBase_EthernetPort.c,
+	cmpiOSBase_EthernetPort.h, cmpiOSBase_EthernetPortProvider.c,
+	cmpiOSBase_IPProtocolEndpoint.c, cmpiOSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_IPProtocolEndpointProvider.c,
+	cmpiOSBase_LocalLoopbackPort.c, cmpiOSBase_LocalLoopbackPort.h,
+	cmpiOSBase_LocalLoopbackPortProvider.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.h,
+	cmpiOSBase_NetworkPortImplementsIPEndpointProvider.c,
+	cmpiOSBase_TokenRingPort.c, cmpiOSBase_TokenRingPort.h,
+	cmpiOSBase_TokenRingPortProvider.c:
+
+	added author to headers
+
+2003-07-02  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CimNetwork.c, OSBase_CommonNetwork.c, OSBase_CommonNetwork.h,
+	OSBase_IPProtocolEndpoint.c, OSBase_IPProtocolEndpoint.h,
+	ciminetwork.h, cmpiLinux_CSNetworkPort.c, cmpiLinux_EthernetPort.c,
+	cmpiLinux_IPProtocolEndpoint.c, cmpiLinux_LocalLoopbackPort.c,
+	cmpiLinux_NetworkPortImplementsIPEndpoint.c,
+	cmpiLinux_TokenRingPort.c, cmpiOSBase_CSNetworkPortProvider.c,
+	cmpiOSBase_EthernetPort.c, cmpiOSBase_EthernetPort.h,
+	cmpiOSBase_EthernetPortProvider.c, cmpiOSBase_IPProtocolEndpoint.c,
+	cmpiOSBase_IPProtocolEndpoint.h,
+	cmpiOSBase_IPProtocolEndpointProvider.c,
+	cmpiOSBase_LocalLoopbackPort.c, cmpiOSBase_LocalLoopbackPort.h,
+	cmpiOSBase_LocalLoopbackPortProvider.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.c,
+	cmpiOSBase_NetworkPortImplementsIPEndpoint.h,
+	cmpiOSBase_NetworkPortImplementsIPEndpointProvider.c,
+	cmpiOSBase_TokenRingPort.c, cmpiOSBase_TokenRingPort.h,
+	cmpiOSBase_TokenRingPortProvider.c, makefile,
+	mof/Linux_Network.mof, mof/Linux_NetworkRegistration.mof:
+
+	restructured files and contents; each provider consists now of 3
+	modules; one contains the CMPI provider interfaces, one factory
+	functionality and all functions related to the CIM model and one
+	module containing the resource access functionality; the network
+	common module offers base network resource access functionality
+
+2003-05-16  Viktor Mihajlovski <mihajlov@de.ibm.com>
+
+	* makefile, setting.cmpi:
+
+	Changed makefile install targets to support Pegasus.
+
+2003-05-12  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* README:
+
+	CIM schema version changed from 2.7.1 (preliminary) to 2.7 (final)
+
+2003-05-12  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* test/: README, makefile, test-cmpi-network.sh,
+	cim/Linux_CSNetworkPort.cim, cim/Linux_EthernetPort.cim,
+	cim/Linux_IPProtocolEndpoint.cim, cim/Linux_LocalLoopbackPort.cim,
+	cim/Linux_NetworkPortImplementsIPEndpoint.cim,
+	cim/Linux_TokenRingPort.cim,
+	system/linux/Linux_EthernetPort.system:
+
+	added dir test; contains the scripts and input files to perform
+	tests via the SBLIM Test Suite (CVS package testsuite)
+
+2003-05-05  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_CSNetworkPort.c,
+	cmpiLinux_NetworkPortImplementsIPEndpoint.c:
+
+	adapted changed input params of _assoc_get_inst()
+
+2003-04-28  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* CimNetwork.c, cmpiLinux_IPProtocolEndpoint.c,
+	cmpiLinux_LocalLoopbackPort.c, makefile, setting.cmpi,
+	mof/makefile.cmpi:
+
+	started porting to zLinux (S390)
+
+2003-04-07  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_EthernetPort.c, cmpiLinux_IPProtocolEndpoint.c,
+	cmpiLinux_LocalLoopbackPort.c, cmpiLinux_TokenRingPort.c:
+
+	getInstance checks now system key value(s)
+
+2003-04-06  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_EthernetPort.c, cmpiLinux_IPProtocolEndpoint.c,
+	cmpiLinux_LocalLoopbackPort.c, cmpiLinux_TokenRingPort.c:
+
+	fixed behaviour with return codes - only if an instance was not
+	found, CIM_ERR_NOT_FOUND should be returned
+
+2003-04-04  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* ciminetwork.h:
+
+	c++ compatibility statement added
+
+2003-04-04  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* license.html:
+
+	update to version 1.0
+
+2003-04-01  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_NetworkPortImplementsIPEndpoint.c:
+
+	fixed bug in setting _RefLeftClass parameter - was not set back
+
+2003-04-01  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_CSNetworkPort.c,
+	cmpiLinux_NetworkPortImplementsIPEndpoint.c:
+
+	fixed bug in checking of resultClass parameter
+
+2003-03-31  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* setting.cmpi:
+
+	abstracted path entries
+
+2003-03-19  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* cmpiLinux_CSNetworkPort.c, cmpiLinux_EthernetPort.c,
+	cmpiLinux_IPProtocolEndpoint.c, cmpiLinux_LocalLoopbackPort.c,
+	cmpiLinux_NetworkPortImplementsIPEndpoint.c,
+	cmpiLinux_TokenRingPort.c:
+
+	fixed parameter order of CMNewObjectPath
+
+2003-03-19  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* mof/Linux_Network.mof:
+
+	fixed missing Association Qualifier
+
+2003-03-18  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* makefile, CimNetwork.c, INSTALL, README, ciminetwork.h,
+	cmpiLinux_CSNetworkPort.c, cmpiLinux_EthernetPort.c,
+	cmpiLinux_IPProtocolEndpoint.c, cmpiLinux_LocalLoopbackPort.c,
+	cmpiLinux_NetworkPortImplementsIPEndpoint.c,
+	cmpiLinux_TokenRingPort.c, semantictest_OSBaseStage2_Network.sh,
+	setting.cmpi, mof/Linux_Network.mof,
+	mof/Linux_NetworkRegistration.mof, mof/makefile.cmpi,
+	mof/makefile.pegasus:
+
+	Initial revision
+
+2003-03-18  Heidi Eckhart <heidineu@de.ibm.com>
+
+	* makefile, CimNetwork.c, INSTALL, README, ciminetwork.h,
+	cmpiLinux_CSNetworkPort.c, cmpiLinux_EthernetPort.c,
+	cmpiLinux_IPProtocolEndpoint.c, cmpiLinux_LocalLoopbackPort.c,
+	cmpiLinux_NetworkPortImplementsIPEndpoint.c,
+	cmpiLinux_TokenRingPort.c, semantictest_OSBaseStage2_Network.sh,
+	setting.cmpi, mof/Linux_Network.mof,
+	mof/Linux_NetworkRegistration.mof, mof/makefile.cmpi,
+	mof/makefile.pegasus:
+
+	SBLIM Network Package with CMPI style provider implementations;
+	instrumented classes are EthernetPort, TokenRingPort,
+	LocalLoopbackPort, IPProtocolEndpoint and associations
+	CSNetworkPort, NetworkPortImplementsIPEndpoint
+

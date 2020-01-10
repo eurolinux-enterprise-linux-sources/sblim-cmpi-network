@@ -1,0 +1,184 @@
+
+/* ---------------------------------------------------------------------------*/
+(C) Copyright IBM Corp. 2002, 2009
+
+THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE
+("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE
+CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+
+You can obtain a current copy of the Eclipse Public License from
+http://www.opensource.org/licenses/eclipse-1.0.php
+
+Author:       Heidi Neumann <heidineu@de.ibm.com>
+Date  :	      03/18/2003
+
+/* ---------------------------------------------------------------------------*/
+
+
+SBLIM Network Instrumentation for CMPI README
+.............................................
+
+
+Introduction
+------------
+
+The Network Instrumentation allows you to get information about the 
+network configuration of a system via CIMOM technology/infrastructure.
+
+The instrumented classes / associations are
+
+- Linux_EthernetPort
+- Linux_TokenRingPort
+- Linux_LocalLoopbackPort
+- Linux_IPProtocolEndpoint
+- Linux_CSNetworkPort
+- Linux_NetworkPortImplementsIPEndpoint
+
+
+Package Contents
+----------------
+
+./README	This file
+./*.h		Header Files
+./*.c		Provider Code
+./mof/		Schema file(s)
+./test/		Configuration files for SBLIM TestSuite
+
+
+
+Build Instructions
+------------------
+
+
+Prerequisites
+.............
+- CIMOM installed
+- CMPI enabled CIMOM
+- CIM Schema Version 2.7 or higher loaded into the CIMOM's
+  repository
+- to enable Indication support:
+  SBLIM package indication_helper installed
+- to enable Testsuite support:
+  SBLIM package sblim-testsuite installed
+- sblim-cmpi-devel package installed
+- sblim-cmpi-base package installed
+
+
+Building CIMOM and CMPI for this CIMOM
+.........................................
+
+CMPI support is available for SBLIM's sfcb, OpenPegasus, OpenCimom
+(former SNIA CIMOM) and OpenWBEM
+
+- sfcb      ... CMPI as only provider interface
+- Pegasus   ... CMPI is part of Pegasus
+- OpenCimom ... install SBLIM cmpi-adapter for snia (please follow 
+                the instructions in the README.cmpi file of SBLIM's
+                cmpi-adapter package)
+- OpenWBEM  ... CMPI is part of OpenWBEM
+
+
+Building cmpi-base
+..................
+Please follow the instructions in the README file of the 
+cmpi-base package.
+
+
+Building cmpi-network
+.....................
+
+This package is now GNU autotool enabled, refer to the file
+named INSTALL for generic instructions.
+
+The generated configure script tries to determine where the CMPI header files
+are located. For this purpose it searches a set of well-known locations.
+The "canonical" location is /usr/include/cmpi or /usr/local/include/cmpi,
+depending on how configure is invoked.
+
+Further, configure "determines" where providers are to be installed. Actually,
+there's no detection logic. The provider directory will always be
+/usr/lib/cmpi or /usr/local/lib/cmpi. If a CIM server requires a particular
+directory this can be selected by specifying the PROVIDERDIR variable.
+
+And finally, configure tries to find out which CIM server type is being used.
+This is necessary in order to select the appropriate schema and provider
+registration technique. If the CIM server is not or incorrectly identified,
+it is possible to specify it via the CIMSERVER variable.
+Supported values are pegasus, sfcb, openwbem and sniacimom.
+
+For instance, in order to configure for a locally installed Pegasus you can
+issue the following command:
+./configure CIMSERVER=pegasus PROVIDERDIR=$PEGASUS_HOME/lib
+
+
+
+Load Schema into CIMOM's repository
+...................................
+
+with Pegasus/sfcb :
+.................
+The loading and registering of the classes/associations and
+their provider is done during the "make postinstall".
+
+with OpenCimom/SNIA CIMOM :
+...........................
+Start the cimbrowser (/usr/sniacimom/bin). Load the schema
+file Linux_Base.mof with "File" -> "Reload Mof" into the 
+namespace root/cimv2. Before at least CIM Core and System
+schemata have to be loaded into the repository.
+
+
+
+Common Libraries
+----------------
+
+- OSBase_CommonNetwork :
+  implements the resource access and is responsible for common
+  network data gathering 
+
+
+Class/Association specific Libraries
+------------------------------------
+
+class Linux_EthernetPort
+..........................
+- cmpiOSBase_EthernetPortProvider.c
+- cmpiOSBase_EthernetPort.c/.h
+
+class Linux_TokenRingPort
+...........................
+- cmpiOSBase_TokenRingPortProvider.c
+- cmpiOSBase_TokenRingPort.c/.h
+
+class Linux_LocalLoopbackPort
+.......................
+- cmpiOSBase_LocalLoopbackPortProvider.c
+- cmpiOSBase_LocalLoopbackPort.c/.h
+
+class Linux_IPProtocolEndpoint
+.....................
+- cmpiOSBase_IPProtocolEndpointProvider.c
+- cmpiOSBase_IPProtocolEndpoint.c/.h
+- OSBase_IPProtocolEndpoint.c/.h
+
+
+association Linux_CSNetworkPort
+...........................
+- cmpiOSBase_CSNetworkPortProvider.c
+
+association Linux_NetworkPortImplementsIPEndpoint
+...........................
+- cmpiOSBase_NetworkPortImplementsIPEndpointProvider.c
+- cmpiOSBase_NetworkPortImplementsIPEndpoint.c/.h
+
+
+Automated Function Verifcation Test 
+-----------------------------------
+
+The sub directory test contains the configuration files,
+necessary to drive the SBLIM Test Suite. The SBLIM Test
+Suite is a tool to automate function verification tests
+of providers. 
+
+How to set up and drive the test is described in the 
+README.TEST file.

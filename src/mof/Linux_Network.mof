@@ -1,0 +1,130 @@
+//
+// Linux_Network.mof
+//
+// (C) Copyright IBM Corp. 2002, 2009
+//
+// THIS FILE IS PROVIDED UNDER THE TERMS OF THE ECLIPSE PUBLIC LICENSE 
+// ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THIS FILE 
+// CONSTITUTES RECIPIENTS ACCEPTANCE OF THE AGREEMENT.
+//
+// You can obtain a current copy of the Eclipse Public License from
+// http://www.opensource.org/licenses/eclipse-1.0.php
+//
+// Author:       Heidi Neumann <heidineu@de.ibm.com>
+// Contributors:
+//
+// Description: 
+// CIM classes for Linux Network Instrumentation
+//
+
+
+#pragma locale ("en_US")
+//#pragma namespace ("root/cimv2")
+
+
+// -------------------------------------------------------------------
+// *******************************************************************
+// 	Classes
+// *******************************************************************
+// -------------------------------------------------------------------
+
+
+
+// ===================================================================
+// 	Linux_IPProtocolEndpoint
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_IPProtocolEndpointProvider"),
+  Description ("A class derived from IPProtocolEndpoint"
+  " to represent the IP Configuration." )
+] 
+class Linux_IPProtocolEndpoint : CIM_IPProtocolEndpoint
+{ };
+
+
+// ===================================================================
+// 	Linux_LocalLoopbackPort
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_LocalLoopbackPortProvider"),
+  Description ("A class derived from NetworkPort. Its a logical "
+  "representation of networks communication hardware." )
+] 
+class Linux_LocalLoopbackPort : CIM_NetworkPort
+{ };
+
+
+// ===================================================================
+// 	Linux_EthernetPort
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_EthernetPortProvider"),
+  Description ("A class derived from EthernetPort. Its a logical "
+  "representation of networks communication hardware." )
+] 
+class Linux_EthernetPort : CIM_EthernetPort
+{ };
+
+
+// ===================================================================
+// 	Linux_TokenRingPort
+// ===================================================================
+
+[ Provider("cmpi:cmpiOSBase_TokenRingPortProvider"),
+  Description ("A class derived from TokenRingPort. Its a logical "
+  "representation of networks communication hardware." )
+] 
+class Linux_TokenRingPort : CIM_TokenRingPort
+{ };
+
+
+
+
+// -------------------------------------------------------------------
+// *******************************************************************
+// 	Associations
+// *******************************************************************
+// -------------------------------------------------------------------
+
+
+
+// ===================================================================
+// 	Linux_CSNetworkPort
+// ===================================================================
+
+[ Association, 
+  Aggregation,
+  Composition,
+  Provider("cmpi:cmpiOSBase_CSNetworkPortProvider") ] 
+class Linux_CSNetworkPort : CIM_SystemDevice
+{ 
+  [ Override ("GroupComponent"),
+    Description ("The Computer System Container.")
+  ]
+  Linux_ComputerSystem REF GroupComponent;
+
+  [ Override ("PartComponent"),
+    Description ("The Network Ports, available to the CS.")
+  ]
+  CIM_NetworkPort REF PartComponent;
+};
+
+
+// ===================================================================
+// 	Linux_PortImplementsEndpoint
+// ===================================================================
+
+[ Association,
+  Provider("cmpi:cmpiOSBase_NetworkPortImplementsIPEndpointProvider") ] 
+class Linux_NetworkPortImplementsIPEndpoint : CIM_PortImplementsEndpoint
+{ 
+  [ Override ("Antecedent"),
+    Description ("The Network Ports, available to the CS.")
+  ]
+  CIM_NetworkPort REF Antecedent;
+
+  [ Override ("Dependent"),
+    Description ("The IP Protocol Endpoints, available to the CS.")
+  ]
+  Linux_IPProtocolEndpoint REF Dependent;
+};

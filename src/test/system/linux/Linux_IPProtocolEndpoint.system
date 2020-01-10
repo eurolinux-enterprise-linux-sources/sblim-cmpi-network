@@ -1,0 +1,24 @@
+********************************************************************************
+class : Linux_IPProtocolEndpoint
+
+--------------------------------------------------------------------------------
+Linux_IPProtocolEndpoint : -eq -cmd cat /proc/net/dev | grep -c -E 'eth|lo|tr|sit'
+
+--------------------------------------------------------------------------------
+SystemCreationClassName : -eq -file ComputerSystem.keys[0]
+SystemName : -eq -file ComputerSystem.keys[1]
+CreationClassName : -eq Linux_IPProtocolEndpoint
+NameFormat : -eq IP
+ProtocolType : -eq 2
+IPVersionSupport : -eq 1
+
+Caption : -set
+Description : -set
+
+OtherEnabledState : -empty
+Status : -eq OK
+
+--------------------------------------------------------------------------------
+Instance Level : Linux_IPProtocolEndpoint.pl
+Property Order : Name EnabledState RequestedState IPv4Address SubnetMask
+

@@ -1,0 +1,22 @@
+********************************************************************************
+class : Linux_EthernetPort
+
+--------------------------------------------------------------------------------
+Linux_EthernetPort : -eq -cmd cat /proc/net/dev | grep -c eth
+
+--------------------------------------------------------------------------------
+SystemCreationClassName : -eq -file ComputerSystem.keys[0]
+SystemName : -eq -file ComputerSystem.keys[1]
+CreationClassName : -eq Linux_EthernetPort
+LinkTechnology : -eq 2
+
+Caption : -set
+Description : -set
+
+OtherEnabledState : -empty
+Status : -eq OK
+
+--------------------------------------------------------------------------------
+Instance Level : Linux_EthernetPort.pl
+Property Order : Name EnabledState RequestedState
+

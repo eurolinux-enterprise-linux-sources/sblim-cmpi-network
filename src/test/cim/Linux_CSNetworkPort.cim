@@ -1,0 +1,33 @@
+********************************************************************************
+association : Linux_CSNetworkPort
+objectPath : Linux_CSNetworkPort.GroupComponent="Linux_ComputerSystem.CreationClassName=Linux_ComputerSystem,Name=testsystem",PartComponent="Linux_TokenRingPort.SystemCreationClassName=Linux_ComputerSystem,SystemName=testsystem,CreationClassName=Linux_TokenRingPort,DeviceID=tr5"
+sourceRole : GroupComponent
+targetRole : PartComponent
+sourceClass : Linux_ComputerSystem
+targetClass : CIM_NetworkPort Linux_LocalLoopbackPort Linux_TokenRingPort Linux_EthernetPort
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Association                                                      associatorNames
+
+--------------------------------------------------------------------------------
+Association                                                          associators
+
+--------------------------------------------------------------------------------
+Association                                                       referenceNames
+
+--------------------------------------------------------------------------------
+Association                                                           references
+

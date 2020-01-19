@@ -1,0 +1,20 @@
+********************************************************************************
+class : Linux_LocalLoopbackPort
+objectPath : Linux_LocalLoopbackPort.SystemCreationClassName=Linux_ComputerSystem,SystemName=testsystem,CreationClassName=Linux_LocalLoopbackPort,DeviceID=lo1
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                  create
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED

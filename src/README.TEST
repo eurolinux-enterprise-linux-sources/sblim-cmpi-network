@@ -1,0 +1,31 @@
+Test Environment for SBLIM Network Instrumentation
+
+The SBLIM project offers a Test Suite to perform tests against
+the provider implementation and consistence tests against system
+values.
+
+Prerequisites 
+.............
+
+- sblim-testsuite package propertly installed
+- sblim-cmpi-base package propertly installed
+- sblim-cmpi-network package propertly installed
+
+
+Install Configuration Files
+...........................
+
+make install
+... also installs the configuration file into the testsuite directory
+as indicated by configure
+
+make uninstall
+... also deletes the cmpi-network specific files out of the testsuite
+directories
+
+
+Run Test
+........
+
+Run the test in the testsuite dir by executing 
+./test-cmpi-network.sh

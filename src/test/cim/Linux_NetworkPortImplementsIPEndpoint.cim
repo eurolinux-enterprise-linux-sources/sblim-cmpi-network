@@ -1,0 +1,34 @@
+********************************************************************************
+association : Linux_NetworkPortImplementsIPEndpoint
+objectPath : Linux_NetworkPortImplementsIPEndpoint.Antecedent="Linux_LocalLoopbackPort.SystemCreationClassName=Linux_ComputerSystem,SystemName=testsystem,CreationClassName=Linux_LocalLoopbackPort,DeviceID=lo1",Dependent="Linux_IPProtocolEndpoint.SystemCreationClassName=Linux_ComputerSystem,SystemName=testsystem,CreationClassName=Linux_IPProtocolEndpoint,Name=IPv4_lo1"
+sourceRole : Antecedent
+targetRole : Dependent
+sourceClass : CIM_NetworkPort Linux_LocalLoopbackPort Linux_EthernetPort Linux_TokenRingPort
+targetClass : Linux_IPProtocolEndpoint
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Association                                                      associatorNames
+
+--------------------------------------------------------------------------------
+Association                                                          associators
+
+--------------------------------------------------------------------------------
+Association                                                       referenceNames
+
+--------------------------------------------------------------------------------
+Association                                                           references
+                                               references
+

@@ -1,0 +1,20 @@
+********************************************************************************
+class : Linux_EthernetProt
+objectPath : Linux_EthernetPort.SystemCreationClassName=Linux_ComputerSystem,SystemName=testsystem,CreationClassName=Linux_EthernetProt,DeviceID=eth1
+
+--------------------------------------------------------------------------------
+Instance                                                       enumInstanceNames
+
+--------------------------------------------------------------------------------
+Instance                                                           enumInstances
+
+--------------------------------------------------------------------------------
+Instance                                                                     get
+
+--------------------------------------------------------------------------------
+Instance                                                                  create
+Expected Exception : NOT_SUPPORTED
+
+--------------------------------------------------------------------------------
+Instance                                                                  delete
+Expected Exception : NOT_SUPPORTED

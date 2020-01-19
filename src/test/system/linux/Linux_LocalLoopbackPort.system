@@ -1,0 +1,22 @@
+********************************************************************************
+class : Linux_LocalLoopbackPort
+
+--------------------------------------------------------------------------------
+Linux_LocalLoopbackPort : -eq -cmd cat /proc/net/dev | grep -c lo
+
+--------------------------------------------------------------------------------
+SystemCreationClassName : -eq -file ComputerSystem.keys[0]
+SystemName : -eq -file ComputerSystem.keys[1]
+CreationClassName : -eq Linux_LocalLoopbackPort
+LinkTechnology : -eq 1
+
+Caption : -set
+Description : -set
+
+OtherEnabledState : -empty
+Status : -eq OK
+
+--------------------------------------------------------------------------------
+Instance Level : Linux_LocalLoopbackPort.pl
+Property Order : Name EnabledState RequestedState
+

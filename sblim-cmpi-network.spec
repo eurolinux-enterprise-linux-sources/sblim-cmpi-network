@@ -2,7 +2,7 @@
 
 Name:           sblim-cmpi-network
 Version:        1.4.0
-Release:        11%{?dist}
+Release:        9%{?dist}
 Summary:        SBLIM Network Instrumentation
 
 Group:          Applications/System
@@ -123,12 +123,6 @@ fi
 %postun -p /sbin/ldconfig
 
 %changelog
-* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 1.4.0-11
-- Mass rebuild 2014-01-24
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.4.0-10
-- Mass rebuild 2013-12-27
-
 * Wed Aug 14 2013 Vitezslav Crhonek <vcrhonek@redhat.com> - 1.4.0-9
 - Use Pegasus root/interop instead of root/PG_Interop
 
